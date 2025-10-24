@@ -1,0 +1,106 @@
+/* Genel sayfa ayarları */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937; /* Daha koyu, okunaklı bir gri */
+}
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827; /* Daha koyu başlık rengi */
+  border-bottom: 4px solid #2563eb;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+/* Main layout */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Sol sütun */
+.left-column {
+  flex: 2 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Sağ sütun */
+.right-column {
+  flex: 1 1 300px;
+}
+
+/* Kartlar */
+.card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Başlık ve yazar */
+.card h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0 0 8px 0;
+}
+
+/* Kategori badge */
+.badge {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Favori buton */
+.button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.button.favori {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.button.favori.active {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Responsive: mobil için tam genişlik */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
+  }
+}
